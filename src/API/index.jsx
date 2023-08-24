@@ -11,3 +11,5 @@ export const allPosts = async () => {
     return result.data.posts;
 
 }
+
+export default API_URL;

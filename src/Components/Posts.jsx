@@ -23,20 +23,20 @@ export default function Posts() {
       <h2> All Posts</h2>
       {posts.map((obj) => {
         return (
-          <div key={obj.id} className="message">
+          <div key={obj.id} className="info">
             <p> Message: {obj.messages}</p>
             <p> Author ID: {obj.author.id}</p>
             <p> Username: {obj.author.username}</p>
             <h3> {obj.title}</h3>
-            <p> Description: {obj.description}</p>
+            <h3>Condition: {obj.condition}</h3>
+            <h3>Location: {obj.location}</h3>
+            <p>Image: {obj.image}</p>
             <p>Price: {obj.price}</p>
             <p>Will Deliver: {obj.willDeliver}</p>
+            <h3> Description: {obj.description}</h3>
             <p>Created At: {obj.createdAt}</p>
             <p>Updated At: {obj.updatedAt}</p>
             <p>Is Active: {obj.active}</p>
-            <h3>Location: {obj.location}</h3>
-            <p>Image: {obj.image}</p>
-            <h3 className="description">{obj.description}</h3>
           </div>
         );
       })}
