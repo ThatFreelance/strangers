@@ -1,10 +1,11 @@
-import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./Components/HomePage";
 import Navbar from "./Components/Navbar";
+import HomePage from "./Components/HomePage";
+import Posts from "./Components/Posts";
+//import Login from "./Components/Login";
 import Footer from "./Components/Footer";
-
 import "./App.css";
+
 
 function App() {
   return (
@@ -13,7 +14,10 @@ function App() {
       <div id="navbar">{/* navigation here */}</div>
       <div id="main-section">
         <Routes>
-        <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage />}/>
+          <Route path="/Posts" element={<Posts />} />
+          {/* <Route path="/Login" element={<Login />} /> */}
+          
         </Routes>
       </div>
       <Footer />
