@@ -1,6 +1,6 @@
 import { API_URL } from "./Api.jsx";
 
-export const register = async (username, password) => {
+export const userRegister = async (username, password) => {
     console.log(`username: ${username}, password: ${password}`)
 
     const response = await fetch(`${API_URL}/users/register`, {

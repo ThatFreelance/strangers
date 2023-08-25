@@ -7,11 +7,14 @@ export default function Navbar() {
       <Link to="/">
         <h2>Home</h2>
       </Link>
-      <Link to="/Posts">
+      <Link to="/posts">
         <h2>Post</h2>
       </Link>
-      <Link to="/Login">
+      <Link to="/login">
         <h2>Login</h2>
+      </Link>
+      <Link to="/register">
+        <h2>Register</h2>
       </Link>
     </div>
   );

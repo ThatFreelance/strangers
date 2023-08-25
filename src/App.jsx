@@ -1,12 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import HomePage from "./Components/HomePage";
+import Home from "./Components/Home";
 import Posts from "./Components/Posts";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import Footer from "./Components/Footer";
 import "./App.css";
-
 
 function App() {
   return (
@@ -15,11 +14,10 @@ function App() {
       <div id="navbar">{/* navigation here */}</div>
       <div id="main-section">
         <Routes>
-          <Route path="/" element={<HomePage />}/>
-          <Route path="/Posts" element={<Posts />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path ='/Register' element={<Register />} />
-          
+          <Route path="/" element={<Home />} />
+          <Route path="/posts" element={<Posts />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
       <Footer />
