@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Register } from '../API/Register.jsx';
+import { userRegister } from '../API/userRegister.jsx';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 
-export default function userRegister() {
+export default function register() {
 
     const userRef = useRef();
     const errRef = useRef();
@@ -21,7 +21,7 @@ export default function userRegister() {
     async function handleSubmit(e, data) {
         e.preventDefault();
         try{
-            const result = await Register(user, pwd);
+            const result = await userRegister(user, pwd);
             setRegister(result);
         console.log(result);
         console.log(user, pwd);
