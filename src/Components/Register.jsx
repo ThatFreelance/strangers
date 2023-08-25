@@ -38,7 +38,7 @@ export default function register() {
 
     return <form method="post" onSubmit={handleSubmit}>
 
-        <h3 id="component-h3"> Register </h3>
+        <h3> Register </h3>
         <label>
         <input className='reg-log-input'value={user} onChange={(e) => setUser(e.target.value)} required 
         placeholder=" Username *"/>
@@ -46,12 +46,12 @@ export default function register() {
         <hr />
         <label>
         <input className='reg-log-input' value={pwd} type="password" onChange={(e) => setPwd(e.target.value)} required
-        placeholder=" Password *" maxLength="8" minLength="6"/>
+        placeholder=" Password *" maxLength="12" minLength="6"/>
         </label>
         <hr />
         <label>
         <input className='reg-log-input' value={validPwd} type="password" onChange={(e) => setValidPwd(e.target.value)} required
-        placeholder=" Confirm your password *" maxLength="8" minLength="6" />
+        placeholder=" Confirm your password *" maxLength="12" minLength="6" />
         </label>
         <hr />
         <label>
